@@ -4,17 +4,16 @@ import Jsx1 from './components/02-jsx/01-jsx';
 import Jsx2 from './components/02-jsx/02-jsx';
 import Jsx3 from './components/02-jsx/03-jsx';
 import Jsx4 from './components/02-jsx/04-jsx';
-import InlineStyling from './components/03-styles.js/01-inline-styling';
-
-import ExternalStyling from './components/03-styles.js/03-external-styling';
-import ExternalModuleStyling from './components/03-styles.js/04-external-module-styling';
-import InternalStyling from './components/03-styles.js/02-internal-styling';
-
-
+import InlineStyling from './components/03-styles/01-inline-styling';
+import InternalStyling from './components/03-styles/02-internal-styling';
+import ExternalStyling from './components/03-styles/03-external-styling';
+import ExternalModuleStyling from './components/03-styles/04-external-module-styling';
+import SassScss from './components/03-styles/05-sass-scss';
+import DijitalSaatUygulamasi1 from './components/04-dijital-saat-uygulamasi1/dijital-saat-uygulmasi1';
 function App() {
   return (
     <>
-        <Apples />
+         <Apples />
             <br />
             <Bananas1 />
             <br />
@@ -36,7 +35,10 @@ function App() {
             <br />
             <ExternalModuleStyling />
             <br />
-
+            <SassScss />
+            <br />
+            <DijitalSaatUygulamasi1 />
+            <br />
     </>
   )
 }
