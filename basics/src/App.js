@@ -12,7 +12,23 @@ import SassScss from './components/03-styles/05-sass-scss';
 import DijitalSaatUygulamasi1 from './components/04-dijital-saat-uygulamasi1/dijital-saat-uygulmasi1';
 import Greetings from './components/05-props/01-greetings';
 import Products from './components/05-props/05-products';
-import DijitalSaatUygulamasi2 from './components/06-dijital-saat-uygulamasi2/dijital-saat-uygulamasi2';
+//import DijitalSaatUygulamasi2 from './components/06-dijital-saat-uygulamasi2/dijital-saat-uygulamasi2';
+import Image from './components/07-images/01-image';
+import ImageGallery from './components/07-images/02-image-gallery';
+import ProfileCard from './components/08-profile-card/profile-card';
+
+const profileCardData = {
+    firstName: "Emir",
+    location: "New York",
+    image: "person4.jpg",
+    statistics: [
+        { title: "Likes", stat: 145 },
+        { title: "Photos", stat: 7 },
+        { title: "Following", stat: 329 },
+    ]
+};
+
+
 function App() {
   return (
     <>
@@ -46,7 +62,40 @@ function App() {
             <br />
             <Products />
             <br />
-            <DijitalSaatUygulamasi2 textColor="white" bgColor="red" />
+            
+            <Image />
+            <br />
+            <ImageGallery />
+            <br />
+            <ProfileCard
+                name="Walker"
+                location="Nashville, Tennesse"
+                image="profile-card.jpg"
+                statistics={[
+                    { title: "Shot", stat: 2 },
+                    { title: "Follower", stat: 234 },
+                    { title: "Following", stat: 327 },
+                ]}
+            />
+            <br />
+            <ProfileCard
+                name="Kyle"
+                location="London"
+                image="profile.jpg"
+                statistics={[
+                    { title: "Likes", stat: 50 },
+                    { title: "Photos", stat: 12 },
+                    { title: "Following", stat: 10 },
+                ]}
+            />
+            <br />
+            <ProfileCard {...profileCardData} />
+            {/* <ProfileCard
+                name={profileCardData.firstName}
+                location={profileCardData.location}
+                image={profileCardData.image}
+                statistics={profileCardData.statistics}
+            /> */}
             <br />
     </>
   )
